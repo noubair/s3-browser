@@ -1,0 +1,1 @@
+cd backend; go run main.go & cd ../frontend; node proxy.js & npm run start

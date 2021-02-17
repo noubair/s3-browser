@@ -1,0 +1,5 @@
+bucket:
+  accessKey: <ACCESS_KEY>
+  secretKey: <SECRET_KEY>
+  endpoint:  <ENDPOINT>
+  region: <REGION>

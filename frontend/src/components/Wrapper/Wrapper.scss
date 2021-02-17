@@ -1,0 +1,224 @@
+$font-color: #ffffffd3;
+$orange-color: #fd951fc9;
+$orange-light-color: #fd951f98;
+
+.Popups {
+  .Popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    .PopupInner {
+      position: absolute;
+      left: 35%;
+      right: 35%;
+      vertical-align: middle;
+      top: 40%;
+      bottom:40%;
+      margin: auto;
+      border-radius: 20px;
+      background-color: #1f1f1f;
+      color: $font-color;
+      .CloseButton {
+        font-size: large;
+        background-color: #00000000;
+        position: absolute;
+        right: 1%;
+        top: 2%;
+        align-self: flex-end;
+        border: none;
+        color: $font-color;
+        &:hover {
+          font-weight: bold;
+          background-color: #00000057;
+        }
+      }
+    }
+  }
+}
+
+.Wrapper {
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  $text-margin-left: 2vh;
+  $text-margin-top: 5vh;
+  $border-color: rgb(82, 82, 82);
+  $border-width: 0.005vh;
+  $border-style: solid;
+  $header-height: 5vh;
+  $input-border-radius: 5%;
+
+  .BucketsList {
+    flex: 1;
+    color: $font-color;
+    background-color: #222222;
+    border-right-color: $border-color;
+    border-right-width: $border-width;
+    border-right-style: $border-style;
+
+    .BucketListInputContainer {
+      .BucketsListInput {
+        border: gray;
+        border-style: solid;
+        border-width: 0.005vh;
+        height: $header-height * 0.7;
+        margin-top: 0.5vh;
+        // margin-bottom: 0vh;
+        border-radius: $input-border-radius;
+        width: 90%;
+        background-color: #1f1f1f;
+        color: gray;
+      }
+    }
+
+    .BucketTools {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-bottom-color: #fd951f86;
+      border-bottom-width: $border-width;
+      border-bottom-style: $border-style;
+      color: #fd951fc9;
+      // margin-bottom: 10vh;
+      .NewBucket {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .CreateBucketSign {
+          font-size: x-large;
+          margin-right: 0.5vw;
+        }
+        .CreateBucketText {
+          font-size: small;
+          margin-right: 1vw;
+        }
+        &:hover {
+          font-weight: bold;
+        }
+      }
+      .NavigationButtons {
+        // margin-left: 2vw;
+        .button {
+          border-radius: 20%;
+          border: none;
+          margin-right: 0.3vw;
+          margin-left: 0.3vw;
+          // color: black;
+          color: #0f0f0fc9;
+          background-color: #fd951f98;
+          width: 40%;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .BucketItem {
+      border-bottom-color: #52525263;
+      border-bottom-width: $border-width;
+      border-bottom-style: $border-style;
+      display: flex;
+      align-items: center;
+      font-size: small;
+      background-color: #1f1f1f;
+
+      //TODO: add confition if only not
+      &:hover {
+        background-color: #181818;
+        font-weight: bold;
+      }
+
+      // justify-content: center;
+      .BucketItemTitle {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        text-align: left;
+        margin-left: $text-margin-left;
+      }
+    }
+    .selected {
+      background-color: #141414;
+      font-weight: bold;
+    }
+  }
+
+  .TwoPaneView {
+    //vars
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex: 5;
+    // margin-top: 5vh
+    .Header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: #ffffffad;
+      background-color: #1a1a1a;
+      height: $header-height;
+      border-bottom-color: $border-color;
+      border-bottom-width: $border-width;
+      border-bottom-style: $border-style;
+      font-size: small;
+
+      .HeaderItem {
+        border-right-color: $border-color;
+        border-right-width: $border-width;
+        border-right-style: $border-style;
+        height: 100%;
+        display: flex;
+        vertical-align: middle;
+        background-color: #252525cc;
+        &:hover {
+          background-color: #181818;
+          font-weight: bold;
+        }
+        .HeaderItemTitle {
+          align-self: center;
+          margin-left: $text-margin-left;
+          margin-right: $text-margin-left;
+        }
+      }
+      .selected {
+        background-color: #141414;
+        font-weight: bold;
+      }
+    }
+
+    .SelectedBucketContent {
+      flex: 1;
+      color: #bebebe;
+      background-color: #1f1f1f;
+      border-right-color: white;
+      border-right-width: 1vh;
+
+      .ObjectItem {
+        display: flex;
+        background-color: #272727;
+        text-align: left;
+        font-size: smaller;
+        height: 4vh;
+        border-bottom-color: rgba(128, 128, 128, 0.329);
+        border-bottom-width: $border-width;
+        border-bottom-style: $border-style;
+        .ObjectItemTitle {
+          margin-left: $text-margin-left;
+          align-self: center;
+          justify-self: center;
+        }
+        .NavigationButtons {
+          align-self: initial;
+          display: flex;
+        }
+      }
+    }
+  }
+}

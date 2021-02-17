@@ -1,0 +1,18 @@
+.CustomBucketMenu {
+  cursor: default;
+  background-color: gray;
+  display: block;
+  margin-left: 0px;
+  margin-right: auto;
+  width: 15vw;
+  .MenuItem {
+    background-color: #333333;
+    color: #ffffffd3;
+    font-size: smaller;
+    text-align: left;
+    padding-left: 1vw;
+    border-bottom: #525252;
+    border-bottom-width: 0.005vh;
+    border-bottom-style: solid;
+  }
+}
